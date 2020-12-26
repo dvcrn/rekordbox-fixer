@@ -1,12 +1,14 @@
 # rekordbox-fixer
 
-This is a hacked together script to deal with rekordbox relocation limitations. 
+This is a proof-of-concept, hacked together script to deal with rekordbox relocation limitations. 
 
 Mainly, that rekordbox can't re-link files that have a different extension, so with iTunes/Apple Music, when a song is matched with the cloud, Apple is giving you a new .m4a file instead of whatever you had if it can upgrade your song for you. 
 
 Because of this, when migrating to a new computer and restoring from the Cloud, it can happen that some songs that used to be .mp3 are now .m4a, and rekordbox refuses to re-link the file. 
 
 This script generates a new `rekordbox.xml` file with the filepathes fixed to their .m4a (or anything else) version which you can import into rekordbox to one-by-one fix your files. 
+
+**Note**: My main motivation for writing this was to in-place replace existing files so that new files have all the existing information of the previous files like tags, playlists, etc. This is sadly **not** possible with the XML approach. This tool can still be used to bulk-relink a bunch of files. I pushed it to github in case seomeone else needs something like this.
 
 ## How to use? 
 
